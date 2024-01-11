@@ -2,12 +2,11 @@ import connectDB from "@/libs/mongoDb/mongoDb";
 import userModel from "@/models/user";
 import { NextResponse } from "next/server";
 
-
 export async function GET(){
     try{
-        connectDB()
+        await connectDB()
         try{
-            const users = userModel.find()
+            const users = await userModel.find({})
             return NextResponse.json({
                 message:"success",
                 users:users
@@ -15,14 +14,14 @@ export async function GET(){
 
         }catch(e){
             return NextResponse.json({
-                message:e.errors.email.name
+                message:e
             })
         }
         
     }
     catch(e){
         return NextResponse.json({
-            message:"dataBaseErro"
+            message:e.message
         })
     }
 
