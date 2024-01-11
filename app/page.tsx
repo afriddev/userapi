@@ -5,7 +5,7 @@ import { useEffect } from "react"
 export default function Home() {
   async function re(){
     const response  = await fetch("https://fakeuserapi.vercel.app/api/getUser")
-    console.log(response)
+    console.log(await response.json())
   }
   useEffect(()=>{
     re()

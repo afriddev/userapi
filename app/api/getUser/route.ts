@@ -7,7 +7,7 @@ export  async function GET(){
     try{
         await connectDB()
 
-        const data = await userModel.findOne({})
+        const data = await userModel.find({})
         return NextResponse.json({
             message:"success",
             data:data
@@ -17,7 +17,7 @@ export  async function GET(){
     catch(e){
         
         return NextResponse.json({
-            message:"dabaBaseErro"
+            message:e
         })
         
     }
