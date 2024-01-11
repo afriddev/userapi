@@ -20,8 +20,6 @@ const user = new Schema({
         default:1234567890,
         length:10
     }
-
-    
 })
 
 const userModel = models.user || mongoose.model("user",user)
