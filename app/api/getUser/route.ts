@@ -2,7 +2,7 @@ import connectDB from "@/libs/mongoDb/mongoDb";
 import userModel from "@/models/user";
 import { NextResponse } from "next/server";
 
-export  async function POST(req:Request){
+export  async function GET(){
 
     try{
         await connectDB()
