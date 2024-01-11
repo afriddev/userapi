@@ -1,7 +1,6 @@
 import connectDB from "@/libs/mongoDb/mongoDb";
 import userModel from "@/models/user";
 import { NextResponse } from "next/server";
-export const revalidate = 0; 
 export  async function GET(){
 
     try{
