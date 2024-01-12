@@ -29,7 +29,7 @@ export async function POST(req:Request){
             }
             catch(e){
                 return NextResponse.json({
-                    message:e.errors.email.name
+                    message:e.errors
                 })
             }
         }
