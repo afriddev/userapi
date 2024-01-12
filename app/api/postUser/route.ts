@@ -15,16 +15,20 @@ export async function POST(req: Request) {
         message: "name,email,id Must Be Needed",
       });
     } else {
-      if (name.length > 3 && validateEmail(email) && validateId(id)) {
+      if (
+        name.length > 3 &&
+        validateEmail(email) &&
+        validateId(id) &&
+        typeof loggedIn === "boolean"
+      ) {
         try {
           await userModel.create({
             name: name,
             loggedIn: loggedIn,
             email: email,
             phNo: phNo,
-            image:image,
-            id:id
-
+            image: image,
+            id: id,
           });
           return NextResponse.json({
             message: "cretaed",
@@ -38,6 +42,10 @@ export async function POST(req: Request) {
         if (name.length < 3) {
           return NextResponse.json({
             message: "nameMustBe3Characters",
+          });
+        } else if (!(typeof loggedIn === "boolean")) {
+          return NextResponse.json({
+            message: "loggedInMustBeBoolean",
           });
         } else if (!validateId(id)) {
           return NextResponse.json({
