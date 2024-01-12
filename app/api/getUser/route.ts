@@ -1,5 +1,6 @@
 import connectDB from "@/libs/mongoDb/mongoDb";
 import userModel from "@/models/user";
+export const revalidate = 1; //must
 import { NextResponse } from "next/server";
 export  async function POST(req:Request){
 
@@ -8,15 +9,23 @@ export  async function POST(req:Request){
         const {email} = await req.json()
         try{
             const data = await userModel.findOne({email:email})
-        return NextResponse.json({
-            message:"success",
-            data:data
-        })
+            if(data.length == 1){
+                return NextResponse.json({
+                    message:"success",
+                    data:data
+                })
+            }
+            else{
+                return NextResponse.json({
+                    message:"notFound"
+                })
+
+            }
 
         }
         catch(e){
             return NextResponse.json({
-                message:e.errors.email.name
+                message:e
             })
         }
         
@@ -25,7 +34,7 @@ export  async function POST(req:Request){
     catch(e){
         
         return NextResponse.json({
-            message:e.message
+            message:e
         })
         
     }

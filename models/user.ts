@@ -1,25 +1,38 @@
 import mongoose, { Schema, model, models } from "mongoose";
 
 const user = new Schema({
+    id:{
+        type:String,
+        required:true,
+        immutable:true
+    },
+    image:{
+        type:String,
+        default:"",
+    },
     name:{
         type:String,
-        minLength:3
+        minLength:3,
+        required:true
     },
     email:{
         type:String,
-        minLength:10,
         immutable:true,
         required:true
     },
     loggedIn:{
         type:Boolean,
-        required:true,
+        default:true
+
     },
     phNo:{
         type:Number,
-        default:1234567890,
+        default:null,
         length:10
-    }
+    },
+
+
+
 })
 
 const userModel = models.user ||  mongoose.model("user",user)
