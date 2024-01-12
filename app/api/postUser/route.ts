@@ -18,36 +18,52 @@ export async function POST(req: Request) {
       if (
         name.length > 3 &&
         validateEmail(email) &&
-        validateId(id) &&
-        typeof loggedIn === "boolean"
+        validateId(id) 
       ) {
-        try {
-          await userModel.create({
-            name: name,
-            loggedIn: loggedIn,
-            email: email,
-            phNo: phNo,
-            image: image,
-            id: id,
-          });
-          return NextResponse.json({
-            message: "cretaed",
-          });
-        } catch (e) {
-          return NextResponse.json({
-            message: e,
-          });
+        if(typeof(loggedIn) == 'boolean'){
+          try {
+            await userModel.create({
+              name: name,
+              loggedIn: loggedIn,
+              email: email,
+              phNo: phNo,
+              image: image,
+              id: id,
+            });
+            return NextResponse.json({
+              message: "cretaed",
+            });
+          } catch (e) {
+            return NextResponse.json({
+              message: e,
+            });
+          }
+        }
+        else{
+          try {
+            await userModel.create({
+              name: name,
+              email: email,
+              phNo: phNo,
+              image: image,
+              id: id,
+            });
+            return NextResponse.json({
+              message: "cretaed",
+            });
+          } catch (e) {
+            return NextResponse.json({
+              message: e,
+            });
+          }
+
         }
       } else {
         if (name.length < 3) {
           return NextResponse.json({
             message: "nameMustBe3Characters",
           });
-        } else if (!(typeof loggedIn === "boolean")) {
-          return NextResponse.json({
-            message: "loggedInMustBeBoolean",
-          });
-        } else if (!validateId(id)) {
+        }  else if (!validateId(id)) {
           return NextResponse.json({
             message: "idMustBeAtleast4characters",
           });
