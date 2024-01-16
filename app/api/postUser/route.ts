@@ -2,7 +2,6 @@ import connectDB from "@/libs/mongoDb/mongoDb";
 import validateEmail from "@/libs/validators/emailValidator";
 import validateId from "@/libs/validators/idValidator";
 import userModel from "@/models/user";
-import { error } from "console";
 import { NextResponse } from "next/server";
 export const revalidate = 1; //must
 export async function POST(req: Request) {
@@ -31,7 +30,7 @@ export async function POST(req: Request) {
               id: id,
             });
             return NextResponse.json({
-              message: "cretaed",
+              message: "created",
             });
           } catch (e) {
             return NextResponse.json({
