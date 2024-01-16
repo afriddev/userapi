@@ -3,7 +3,7 @@ import validateEmail from "@/libs/validators/emailValidator";
 import validateId from "@/libs/validators/idValidator";
 import userModel from "@/models/user";
 import { NextResponse } from "next/server";
-export const revalidate = 1; //must
+export const revalidate = 0; //must
 export async function POST(req: Request) {
   try {
     await connectDB();

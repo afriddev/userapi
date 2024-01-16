@@ -1,6 +1,6 @@
 import connectDB from "@/libs/mongoDb/mongoDb";
 import userModel from "@/models/user";
-// export const revalidate = 1; //must
+export const revalidate = 0; //must
 import { NextResponse } from "next/server";
 export  async function POST(req:Request){
 
