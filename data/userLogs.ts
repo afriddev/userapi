@@ -28,6 +28,10 @@ const userLogs = [
         deviceType: "Mobile",
         originCountry: "CA",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "11/01/2024 10:35:45",
@@ -41,6 +45,10 @@ const userLogs = [
         deviceType: "Tablet",
         originCountry: "UK",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "11/01/2024 12:05:30",
@@ -54,6 +62,10 @@ const userLogs = [
         deviceType: "Desktop",
         originCountry: "DE",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "11/01/2024 13:40:12",
@@ -67,6 +79,10 @@ const userLogs = [
         deviceType: "Smartphone",
         originCountry: "FR",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     // Add 14 more log entries here...
     {
@@ -81,6 +97,10 @@ const userLogs = [
         deviceType: "Laptop",
         originCountry: "JP",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "11/01/2024 16:55:30",
@@ -94,6 +114,10 @@ const userLogs = [
         deviceType: "Desktop",
         originCountry: "AU",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "11/01/2024 18:30:12",
@@ -107,6 +131,10 @@ const userLogs = [
         deviceType: "Laptop",
         originCountry: "CA",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "11/01/2024 20:12:55",
@@ -120,6 +148,10 @@ const userLogs = [
         deviceType: "Desktop",
         originCountry: "US",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "11/01/2024 22:05:30",
@@ -133,6 +165,10 @@ const userLogs = [
         deviceType: "Tablet",
         originCountry: "FR",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "11/01/2024 23:50:12",
@@ -146,6 +182,10 @@ const userLogs = [
         deviceType: "Computer",
         originCountry: "UK",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "12/01/2024 01:30:45",
@@ -159,6 +199,10 @@ const userLogs = [
         deviceType: "Desktop",
         originCountry: "US",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "12/01/2024 03:18:30",
@@ -172,6 +216,10 @@ const userLogs = [
         deviceType: "Laptop",
         originCountry: "CA",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "12/01/2024 05:05:12",
@@ -185,6 +233,10 @@ const userLogs = [
         deviceType: "Desktop",
         originCountry: "DE",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "12/01/2024 06:50:55",
@@ -198,6 +250,10 @@ const userLogs = [
         deviceType: "Smartphone",
         originCountry: "JP",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "12/01/2024 08:30:30",
@@ -211,6 +267,10 @@ const userLogs = [
         deviceType: "Tablet",
         originCountry: "AU",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "12/01/2024 10:12:12",
@@ -224,6 +284,10 @@ const userLogs = [
         deviceType: "Computer",
         originCountry: "FR",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
     {
       loggedAt: "12/01/2024 12:05:45",
@@ -237,6 +301,44 @@ const userLogs = [
         deviceType: "Laptop",
         originCountry: "UK",
       },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
+    },
+    {
+      loggedAt: "12/01/2024 12:07:45",
+      status: "LOGOUT",
+      deviceDetails: {
+        ipAddress: "2001:db8::7",
+        browserName: "Safari 20",
+        browserType: "Browser",
+        browserVersion: "20.0.0.0",
+        osName: "MacOS",
+        deviceType: "Laptop",
+        originCountry: "UK",
+      },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
+    },
+    {
+      loggedAt: "12/01/2024 12:08:45",
+      status: "LOGOUT",
+      deviceDetails: {
+        ipAddress: "2001:db8::7",
+        browserName: "Safari 20",
+        browserType: "Browser",
+        browserVersion: "20.0.0.0",
+        osName: "MacOS",
+        deviceType: "Laptop",
+        originCountry: "UK",
+      },
+      location:{
+        latitude:"21.3.222.2",
+        longitude:"232.2323.12321"
+      }
     },
   ];
   
